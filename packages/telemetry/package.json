@@ -1,0 +1,22 @@
+{
+  "name": "@open-apex/telemetry",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Open-Apex telemetry: ATIF writer, events.jsonl writer, summary writer, replay writer, secret redaction. See §3.5.4, §5.5, §3.4.6.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./redaction": "./src/redaction.ts",
+    "./atif": "./src/atif-writer.ts",
+    "./sink": "./src/sink.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p . --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@open-apex/core": "workspace:*"
+  }
+}

@@ -1,0 +1,11 @@
+version: "3.8"
+# SEEDED BUG: compose sets DB_NAME but run-e2e.sh reads DATABASE_NAME.
+services:
+  db:
+    image: postgres:16
+    environment:
+      # Seeded bug: should be DATABASE_NAME to match run-e2e.sh.
+      DB_NAME: app
+      POSTGRES_PASSWORD: fixture
+    ports:
+      - "5432:5432"

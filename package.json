@@ -1,0 +1,54 @@
+{
+  "name": "open-apex-monorepo",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Open-Apex — terminal-native coding agent.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "bun": "1.3.12"
+  },
+  "packageManager": "bun@1.3.12",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "bun run --filter '*' typecheck",
+    "test": "bun test",
+    "test:live": "RUN_LIVE=1 bun test --timeout 60000",
+    "test:live:openai": "RUN_LIVE=1 CANARY_FILTER=openai bun test --timeout 60000",
+    "test:live:anthropic": "RUN_LIVE=1 CANARY_FILTER=anthropic bun test --timeout 60000",
+    "test:live:search": "RUN_LIVE=1 CANARY_FILTER=search bun test --timeout 60000",
+    "canaries": "bun run packages/evals/src/canaries/run.ts",
+    "canaries:openai": "CANARY_FILTER=openai bun run packages/evals/src/canaries/run.ts",
+    "canaries:anthropic": "CANARY_FILTER=anthropic bun run packages/evals/src/canaries/run.ts",
+    "lint": "bun x eslint .",
+    "lint:fix": "bun x eslint . --fix",
+    "format": "bun x prettier --write .",
+    "format:check": "bun x prettier --check .",
+    "gate:m0": "bun run packages/evals/src/milestone-gates/M0.ts",
+    "gate:m1": "bun run packages/evals/src/milestone-gates/M1.ts",
+    "gate:m2": "bun run packages/evals/src/milestone-gates/M2.ts",
+    "gate:m3": "bun run packages/evals/src/milestone-gates/M3.ts",
+    "gate:m4": "bun run packages/evals/src/milestone-gates/M4.ts",
+    "gate:m5": "bun run packages/evals/src/milestone-gates/M5.ts",
+    "gate:m6": "bun run packages/evals/src/milestone-gates/M6.ts",
+    "gate:m7": "bun run packages/evals/src/milestone-gates/M7.ts",
+    "verify:gate": "bun run packages/config/src/verification-gate/run.ts",
+    "bench:smoke": "echo 'tb2 smoke — hand off to user per §M1/M6 (TB2 runs are human-gated)'"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "eslint": "^9.10.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "tree-sitter-wasms": "0.1.13",
+    "web-tree-sitter": "0.26.8"
+  }
+}

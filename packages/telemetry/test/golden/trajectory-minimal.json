@@ -1,0 +1,90 @@
+{
+  "schema_version": "ATIF-v1.6",
+  "session_id": "s_m0_golden_minimal",
+  "agent": {
+    "name": "open-apex",
+    "version": "0.0.1",
+    "model_name": "claude-opus-4-6",
+    "tool_definitions": [
+      {
+        "name": "read_file",
+        "description": "Read a file at path",
+        "parameters": {
+          "type": "object",
+          "required": ["path"],
+          "properties": { "path": { "type": "string" } }
+        }
+      }
+    ],
+    "extra": {
+      "prompt_versions": {
+        "identity": "identity.v1",
+        "base_instructions": "base-instructions.v1",
+        "appendix": "appendix.anthropic-opus-4.6.v1"
+      },
+      "preset_id": "tb2-opus46",
+      "preset_revision": "r1"
+    }
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "timestamp": "2026-04-19T12:00:00Z",
+      "source": "user",
+      "message": "Read README.md and report its first paragraph."
+    },
+    {
+      "step_id": 2,
+      "timestamp": "2026-04-19T12:00:01Z",
+      "source": "agent",
+      "model_name": "claude-opus-4-6",
+      "reasoning_effort": "high",
+      "message": "I will read the README file.",
+      "tool_calls": [
+        {
+          "tool_call_id": "call_01",
+          "function_name": "read_file",
+          "arguments": { "path": "README.md" }
+        }
+      ],
+      "observation": {
+        "results": [
+          {
+            "source_call_id": "call_01",
+            "content": "# Open-Apex\n\nOpen-Apex is a terminal-native coding agent."
+          }
+        ]
+      },
+      "metrics": {
+        "prompt_tokens": 120,
+        "completion_tokens": 18,
+        "cached_tokens": 0,
+        "cost_usd": 0.0024
+      }
+    },
+    {
+      "step_id": 3,
+      "timestamp": "2026-04-19T12:00:02Z",
+      "source": "agent",
+      "model_name": "claude-opus-4-6",
+      "reasoning_effort": "high",
+      "message": "The first paragraph reads: 'Open-Apex is a terminal-native coding agent.'",
+      "metrics": {
+        "prompt_tokens": 145,
+        "completion_tokens": 22,
+        "cached_tokens": 120,
+        "cost_usd": 0.0011
+      }
+    }
+  ],
+  "final_metrics": {
+    "total_prompt_tokens": 265,
+    "total_completion_tokens": 40,
+    "total_cached_tokens": 120,
+    "total_cost_usd": 0.0035,
+    "total_steps": 3
+  },
+  "extra": {
+    "cli_version": "0.0.1"
+  }
+}

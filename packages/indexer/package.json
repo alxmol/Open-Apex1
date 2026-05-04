@@ -1,0 +1,22 @@
+{
+  "name": "@open-apex/indexer",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Open-Apex repo map + tree-sitter symbol index + environment intelligence (§M3).",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p . --noEmit",
+    "test": "bun test",
+    "copy-grammars": "bun run scripts/copy-grammars.ts"
+  },
+  "dependencies": {
+    "@open-apex/core": "workspace:*",
+    "tree-sitter-wasms": "^0.1.12",
+    "web-tree-sitter": "^0.25.0"
+  }
+}

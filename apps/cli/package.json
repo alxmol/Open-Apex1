@@ -1,0 +1,28 @@
+{
+  "name": "@open-apex/cli",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Open-Apex CLI — chat + autonomous entrypoints on the same runtime. See §3.3.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "bin": {
+    "open-apex": "./src/bin.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p . --noEmit",
+    "test": "bun test",
+    "dev": "bun run src/bin.ts"
+  },
+  "dependencies": {
+    "@open-apex/core": "workspace:*",
+    "@open-apex/config": "workspace:*",
+    "@open-apex/runtime": "workspace:*",
+    "@open-apex/telemetry": "workspace:*",
+    "@open-apex/tools": "workspace:*",
+    "@open-apex/indexer": "workspace:*",
+    "@open-apex/search": "workspace:*",
+    "@open-apex/provider-openai": "workspace:*",
+    "@open-apex/provider-anthropic": "workspace:*"
+  }
+}

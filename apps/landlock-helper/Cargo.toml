@@ -1,0 +1,27 @@
+[package]
+name = "open-apex-landlock-exec"
+version = "0.0.1"
+edition = "2021"
+license = "Apache-2.0"
+description = "Linux Landlock best-effort kernel sandbox helper for Open-Apex M2 exploratory-executor isolation. Silently degrades on non-Linux, kernel < 5.13, or seccomp-restricted environments."
+
+[[bin]]
+name = "open-apex-landlock-exec"
+path = "src/main.rs"
+
+[dependencies]
+# The `landlock` crate provides safe bindings to the Linux Landlock syscalls
+# (ABI v1+ covers Linux 5.13+, ABI v2 covers 5.19+, ABI v3 covers 6.2+).
+# On non-Linux targets this crate is unused — the binary exits early with
+# the "not supported on this platform" code path.
+landlock = { version = "0.4", optional = true }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+landlock = "0.4"
+libc = "0.2"
+
+[profile.release]
+opt-level = "z"     # size over speed; the helper spawns and exits quickly
+lto = "thin"
+codegen-units = 1
+strip = true

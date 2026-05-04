@@ -1,0 +1,13 @@
+# bun configuration
+# https://bun.com/docs/runtime/bunfig
+
+[install]
+# Lockfile kept at repo root; workspaces resolved to siblings via tsconfig paths + workspace: protocol.
+exact = true
+auto = "fallback"
+
+[test]
+# Default timeout for non-live tests (live tests set --timeout via package.json scripts)
+preload = ["./packages/core/test/setup.ts"]
+coverage = false
+coverageReporter = ["text", "lcov"]

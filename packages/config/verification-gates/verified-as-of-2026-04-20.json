@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "verifiedOn": "2026-04-20",
+  "cli_version": "0.0.1",
+  "tooling": {
+    "bun_version": "1.3.12",
+    "node_version": "v22.14.0",
+    "git_version": "2.49.0",
+    "python_version": "3.13.3",
+    "ripgrep_version": "15.1.0",
+    "harbor_version": "0.4.0"
+  },
+  "model_aliases": [
+    {
+      "alias": "gpt-5.4",
+      "provider": "openai",
+      "present": true
+    },
+    {
+      "alias": "claude-sonnet-4-6",
+      "provider": "anthropic",
+      "present": true,
+      "displayName": "Claude Sonnet 4.6"
+    },
+    {
+      "alias": "claude-opus-4-6",
+      "provider": "anthropic",
+      "present": true,
+      "displayName": "Claude Opus 4.6"
+    },
+    {
+      "alias": "claude-opus-4-7",
+      "provider": "anthropic",
+      "present": true,
+      "displayName": "Claude Opus 4.7"
+    }
+  ],
+  "beta_headers": [
+    {
+      "header": "context-management-2025-06-27",
+      "smokeHttpStatus": 200,
+      "outcome": "available"
+    },
+    {
+      "header": "compact-2026-01-12",
+      "smokeHttpStatus": 200,
+      "outcome": "available"
+    },
+    {
+      "header": "interleaved-thinking-2025-05-14",
+      "smokeHttpStatus": -1,
+      "outcome": "untested"
+    }
+  ],
+  "tb2_dataset_commit_sha": "69671fbaac6d67a7ef0dfec016cc38a64ef7a77c",
+  "external_services": [
+    {
+      "name": "openai.api",
+      "reachable": true,
+      "httpStatus": 404
+    },
+    {
+      "name": "anthropic.api",
+      "reachable": true,
+      "httpStatus": 404
+    },
+    {
+      "name": "serper",
+      "reachable": true,
+      "httpStatus": 403
+    },
+    {
+      "name": "serpapi",
+      "reachable": true,
+      "httpStatus": 200
+    },
+    {
+      "name": "terminal-bench-2.commit-pinned",
+      "reachable": true,
+      "httpStatus": 200
+    },
+    {
+      "name": "harbor-framework.main",
+      "reachable": true,
+      "httpStatus": 200
+    },
+    {
+      "name": "npm.registry",
+      "reachable": true,
+      "httpStatus": 200
+    }
+  ],
+  "capabilities": [
+    {
+      "capability": "openai.models",
+      "state": "required",
+      "outcome": "available",
+      "notes": "126 models",
+      "httpStatus": 200
+    },
+    {
+      "capability": "anthropic.models",
+      "state": "required",
+      "outcome": "available",
+      "notes": "10 models",
+      "httpStatus": 200
+    },
+    {
+      "capability": "openai.reasoning.effort_high",
+      "state": "required",
+      "outcome": "available",
+      "notes": "response id resp_0836a95f91f3d3bf0069e5c4f5673881a09b72853e65f1fe3d",
+      "httpStatus": 200
+    },
+    {
+      "capability": "openai.phase_metadata",
+      "state": "required",
+      "outcome": "available",
+      "notes": "phase field accepted by Responses API (HTTP 200)",
+      "httpStatus": 200
+    },
+    {
+      "capability": "openai.previous_response_id",
+      "state": "required",
+      "outcome": "available",
+      "notes": "CoT preserved: turn 2 continued from resp_0a1962877cf838390069e5c4f888b48195a4090c7b48c638f1",
+      "httpStatus": 200
+    },
+    {
+      "capability": "openai.allowed_tools",
+      "state": "required",
+      "outcome": "available",
+      "notes": "tool_choice.allowed_tools accepted",
+      "httpStatus": 200
+    },
+    {
+      "capability": "openai.parallel_tool_calls",
+      "state": "required",
+      "outcome": "available",
+      "notes": "responses API accepted multi-tool schema with tool_choice=auto; 2 tool call(s) emitted",
+      "httpStatus": 200
+    },
+    {
+      "capability": "anthropic.output_config.effort_high",
+      "state": "required",
+      "outcome": "available",
+      "notes": "output_config.effort=high accepted",
+      "httpStatus": 200
+    },
+    {
+      "capability": "anthropic.adaptive_thinking",
+      "state": "required",
+      "outcome": "available",
+      "notes": "adaptive thinking returned thinking block",
+      "httpStatus": 200
+    },
+    {
+      "capability": "anthropic.signature_roundtrip",
+      "state": "required",
+      "outcome": "available",
+      "notes": "thinking-block signature echoed back cleanly",
+      "httpStatus": 200
+    },
+    {
+      "capability": "anthropic.multi_tool_result",
+      "state": "required",
+      "outcome": "available",
+      "notes": "multiple tool_result blocks in single user message accepted",
+      "httpStatus": 200
+    },
+    {
+      "capability": "anthropic.parallel_tool_calls",
+      "state": "required",
+      "outcome": "available",
+      "notes": "tool-parallel prompt accepted",
+      "httpStatus": 200
+    }
+  ],
+  "blockers": [],
+  "advisories": []
+}

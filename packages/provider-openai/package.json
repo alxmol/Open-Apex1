@@ -1,0 +1,20 @@
+{
+  "name": "@open-apex/provider-openai",
+  "version": "0.0.1",
+  "private": true,
+  "description": "OpenAI Responses API adapter. M0 ships capability matrix only; impl lands in M1.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p . --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@open-apex/core": "workspace:*",
+    "openai": "^6.34.0"
+  }
+}

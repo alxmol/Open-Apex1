@@ -1,0 +1,24 @@
+{
+  "name": "@open-apex/config",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Open-Apex config loader, preset registry, benchmark-safe override registry, OPEN_APEX.md loader, verification-gate artifacts. See §3.3, §3.5.3, §7.6.9, §7.6.10, §7.6.13.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./presets": "./src/preset-loader.ts",
+    "./overrides": "./src/benchmark-overrides.ts",
+    "./project-doc": "./src/project-doc-loader.ts",
+    "./toml": "./src/config-toml.ts",
+    "./verification-gate": "./src/verification-gate/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p . --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@open-apex/core": "workspace:*"
+  }
+}

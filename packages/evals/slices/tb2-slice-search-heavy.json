@@ -1,0 +1,18 @@
+{
+  "id": "tb2-slice-search-heavy",
+  "description": "Tasks known to require external docs (10 tasks). Curated per §7.6.5.",
+  "kind": "cross-cutting",
+  "pinned_commit": "69671fbaac6d67a7ef0dfec016cc38a64ef7a77c",
+  "task_ids": [
+    "caffe-cifar-10",
+    "hf-model-inference",
+    "install-windows-3.11",
+    "modernize-scientific-stack",
+    "mteb-leaderboard",
+    "mteb-retrieve",
+    "protein-assembly",
+    "qemu-alpine-ssh",
+    "qemu-startup",
+    "rstan-to-pystan"
+  ]
+}

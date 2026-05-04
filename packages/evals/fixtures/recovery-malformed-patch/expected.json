@@ -1,0 +1,10 @@
+{
+  "validators": [
+    {
+      "command": ["python3", "-c", "from src.lib import greet; assert greet('Alice') == 'Hello, Alice!'"],
+      "expectedExitCode": 0
+    }
+  ],
+  "seededFailure": "src/lib.py has a 'greet' function with whitespace differences that make every naive apply_patch context mismatch; agent must re-read + rewrite the patch with the current on-disk content",
+  "fix": "update greet() in src/lib.py to return exactly 'Hello, <name>!' (with the exclamation mark). The apply_patch recovery flow (\u00a71.2) hands the model a fresh read_file result on the first failure; second attempt with the fresh context succeeds."
+}

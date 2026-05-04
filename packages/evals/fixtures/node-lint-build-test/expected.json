@@ -1,0 +1,8 @@
+{
+  "validators": [
+    { "command": ["bun", "run", "lint"], "expectedExitCode": 0 },
+    { "command": ["bun", "run", "test"], "expectedExitCode": 0 }
+  ],
+  "seededFailure": "src/index.ts has an unused `path` import that trips eslint's no-unused-vars rule",
+  "fix": "remove the `import * as path from 'node:path'` line"
+}

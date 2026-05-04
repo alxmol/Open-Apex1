@@ -1,0 +1,21 @@
+{
+  "name": "@open-apex/search",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Open-Apex-owned web search layer (§M3). Provider-neutral SearchProvider with Serper.dev primary + SerpAPI fallback (+ google_ai_overview enrichment), extraction, ranking, caching, contamination blocklist.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p . --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@open-apex/config": "workspace:*",
+    "@open-apex/core": "workspace:*",
+    "node-html-parser": "7.1.0"
+  }
+}

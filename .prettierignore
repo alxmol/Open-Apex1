@@ -1,0 +1,34 @@
+# Keep prettier off generated / third-party / fixture content.
+**/node_modules/**
+**/dist/**
+**/build/**
+**/.next/**
+**/coverage/**
+**/target/**
+**/.venv/**
+**/__pycache__/**
+**/.pytest_cache/**
+
+# Fixtures are seeded with intentionally-bad formatting so they exercise
+# the agent's tool surface. Prettier MUST NOT touch them.
+packages/evals/fixtures/**
+
+# Golden artifacts and verification-gate outputs are snapshots; hand-managed.
+packages/telemetry/test/golden/**
+packages/config/verification-gates/**
+gate-result-*.json
+gates/**/*.json
+jobs/**/*.json
+gates/
+
+# The build plan is a massive handwritten spec; not prettier's job.
+open-apex-build-plan.md
+Apex2.md
+docs/
+
+# Lockfiles.
+bun.lockb
+bun.lock
+
+# Rust artifacts.
+apps/landlock-helper/target/**

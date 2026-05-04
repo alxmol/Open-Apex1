@@ -1,0 +1,5 @@
+{
+  "validators": [],
+  "canaryString": "OPEN-APEX-CANARY-2026-04-24",
+  "description": "Fixture for multimodal canaries. Assertions live in the canary scripts, not in validators here."
+}

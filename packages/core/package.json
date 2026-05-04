@@ -1,0 +1,32 @@
+{
+  "name": "@open-apex/core",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Open-Apex shared types, contracts, and schemas. See §3.4 of the build plan.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./provider": "./src/provider/index.ts",
+    "./orchestration": "./src/orchestration/index.ts",
+    "./subagent": "./src/subagent/index.ts",
+    "./storage": "./src/storage/index.ts",
+    "./atif": "./src/atif/index.ts",
+    "./benchmark": "./src/benchmark/index.ts",
+    "./error": "./src/error/index.ts",
+    "./exit": "./src/exit/index.ts",
+    "./result": "./src/result/index.ts",
+    "./runtime": "./src/runtime/index.ts",
+    "./tool": "./src/tool/index.ts",
+    "./prompt": "./src/prompt/index.ts",
+    "./event": "./src/event/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p . --noEmit",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

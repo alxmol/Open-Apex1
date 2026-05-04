@@ -1,0 +1,22 @@
+{
+  "name": "@open-apex/tools",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Open-Apex tool registry + tool implementations. M0 ships the registry only; tools land in M1-M2. See §7.6.12.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p . --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@open-apex/core": "workspace:*",
+    "@open-apex/config": "workspace:*",
+    "@open-apex/indexer": "workspace:*",
+    "@open-apex/search": "workspace:*"
+  }
+}

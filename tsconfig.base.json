@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ESNext"],
+    "types": ["bun"],
+
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "alwaysStrict": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": false,
+    "skipLibCheck": true,
+
+    "noEmit": true,
+    "declaration": false,
+    "sourceMap": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@open-apex/core": ["packages/core/src/index.ts"],
+      "@open-apex/core/*": ["packages/core/src/*"],
+      "@open-apex/runtime": ["packages/runtime/src/index.ts"],
+      "@open-apex/runtime/*": ["packages/runtime/src/*"],
+      "@open-apex/tools": ["packages/tools/src/index.ts"],
+      "@open-apex/tools/*": ["packages/tools/src/*"],
+      "@open-apex/provider-openai": ["packages/provider-openai/src/index.ts"],
+      "@open-apex/provider-openai/*": ["packages/provider-openai/src/*"],
+      "@open-apex/provider-anthropic": ["packages/provider-anthropic/src/index.ts"],
+      "@open-apex/provider-anthropic/*": ["packages/provider-anthropic/src/*"],
+      "@open-apex/search": ["packages/search/src/index.ts"],
+      "@open-apex/search/*": ["packages/search/src/*"],
+      "@open-apex/indexer": ["packages/indexer/src/index.ts"],
+      "@open-apex/indexer/*": ["packages/indexer/src/*"],
+      "@open-apex/telemetry": ["packages/telemetry/src/index.ts"],
+      "@open-apex/telemetry/*": ["packages/telemetry/src/*"],
+      "@open-apex/evals": ["packages/evals/src/index.ts"],
+      "@open-apex/evals/*": ["packages/evals/src/*"],
+      "@open-apex/config": ["packages/config/src/index.ts"],
+      "@open-apex/config/*": ["packages/config/src/*"]
+    }
+  }
+}

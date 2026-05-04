@@ -1,0 +1,7 @@
+{
+  "validators": [
+    { "command": ["./run-e2e.sh"], "expectedExitCode": 0 }
+  ],
+  "seededFailure": "docker-compose.yml sets DB_NAME but run-e2e.sh reads $DATABASE_NAME",
+  "fix": "rename compose env var DB_NAME -> DATABASE_NAME"
+}

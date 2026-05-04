@@ -1,0 +1,7 @@
+{
+  "validators": [
+    { "command": ["pytest", "-q"], "expectedExitCode": 0 }
+  ],
+  "seededFailure": "src/calculator/__init__.py raises ArithmeticError; test expects ZeroDivisionError",
+  "fix": "change `raise ArithmeticError(...)` to `raise ZeroDivisionError(...)` in divide()"
+}

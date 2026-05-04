@@ -1,0 +1,31 @@
+{
+  "name": "@open-apex/evals",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Open-Apex evaluation harness: fixture repos, scenario runner, milestone-gate scripts, TB2 slice definitions.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./fixtures": "./src/fixtures/index.ts",
+    "./gates": "./src/milestone-gates/index.ts",
+    "./scenarios": "./src/scenarios/index.ts",
+    "./slices": "./src/slices/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p . --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@open-apex/core": "workspace:*",
+    "@open-apex/config": "workspace:*",
+    "@open-apex/telemetry": "workspace:*",
+    "@open-apex/tools": "workspace:*",
+    "@open-apex/runtime": "workspace:*",
+    "@open-apex/indexer": "workspace:*",
+    "@open-apex/search": "workspace:*",
+    "@open-apex/provider-openai": "workspace:*",
+    "@open-apex/provider-anthropic": "workspace:*"
+  }
+}

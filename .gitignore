@@ -28,3 +28,36 @@ vendor/
 coverage/
 .cache/
 tmp/
+
+# ── Open-Apex ──
+# Bun / Node
+bun.lockb
+bun.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Monorepo build outputs
+apps/*/dist/
+packages/*/dist/
+apps/landlock-helper/target/
+
+# Open-Apex local runtime data (when running the CLI on this repo)
+.open-apex/
+.openapex/
+runs/
+sessions/
+checkpoints/
+
+# Local planning docs
+open-apex-build-plan.md
+
+# Captured live-API fixtures that shouldn't be checked in (use regenerable fixtures)
+packages/*/test/fixtures/live-capture/
+*.canary.log
+
+# Milestone gate artifacts
+gate-result-*.json
+gates/**/*.json
+jobs/
+docs/

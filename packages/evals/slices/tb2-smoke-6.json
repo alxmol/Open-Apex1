@@ -1,0 +1,14 @@
+{
+  "id": "tb2-smoke-6",
+  "description": "Smoke set — one task per failure mode, <30 min wall clock in parallel per §7.6.5.",
+  "kind": "smoke",
+  "pinned_commit": "69671fbaac6d67a7ef0dfec016cc38a64ef7a77c",
+  "task_ids": [
+    "fix-git",
+    "configure-git-webserver",
+    "hf-model-inference",
+    "crack-7z-hash",
+    "gcode-to-text",
+    "overfull-hbox"
+  ]
+}

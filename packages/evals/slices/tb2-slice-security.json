@@ -1,0 +1,16 @@
+{
+  "id": "tb2-slice-security",
+  "description": "All security tasks on terminal-bench@2.0 (8 tasks) per §7.6.5.",
+  "kind": "category",
+  "pinned_commit": "69671fbaac6d67a7ef0dfec016cc38a64ef7a77c",
+  "task_ids": [
+    "break-filter-js-from-html",
+    "crack-7z-hash",
+    "filter-js-from-html",
+    "fix-code-vulnerability",
+    "openssl-selfsigned-cert",
+    "password-recovery",
+    "sanitize-git-repo",
+    "vulnerable-secret"
+  ]
+}
