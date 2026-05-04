@@ -2,9 +2,9 @@
 
 **Terminal-native coding agent.** Chat + autonomous modes on one shared Bun/TypeScript runtime, targeting Terminal-Bench v2 leaderboard competition.
 
-*Still under construction*
+Still under construction.
 
-![Terminal Bench run screenshot](<./Screenshot 2026-05-03 at 11.14.20 PM.png>)
+![Open-Apex terminal interface](<./Screenshot 2026-05-03 at 11.14.20 PM.png>)
 
 This README summarizes what is shipped in the repository today.
 
